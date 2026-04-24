@@ -1,9 +1,9 @@
 services:
   postgres:
-    image: 'postgres:latest'
+    image: postgres:latest
     environment:
-      - 'POSTGRES_DB=crop_recommendation_system'
-      - 'POSTGRES_PASSWORD=ROOT'
-      - 'POSTGRES_USER=myuser'
+      POSTGRES_DB: crop_recommendation_system
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ROOT
     ports:
-      - '5432'
+      - "5432:5432"   
