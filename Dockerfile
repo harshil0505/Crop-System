@@ -1,11 +1,12 @@
-# Use Java 17 (important for your project)
-FROM eclipse-temurin:17-jdk
-
-# Set working directory
+# Build stage
+FROM maven:3.9.6-eclipse-temurin-17 AS build
 WORKDIR /app
+COPY . .
+RUN mvn clean package -DskipTests
 
-# Copy jar file
-COPY target/*.jar app.jar
-
-# Run application
-ENTRYPOINT ["java", "-jar", "app.jar"]
+# Run stage
+FROM eclipse-temurin:17-jdk
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","app.jar"]
