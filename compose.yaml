@@ -3,7 +3,15 @@ services:
     image: postgres:latest
     environment:
       POSTGRES_DB: crop_recommendation_system
-      POSTGRES_USER: postgres
+      POSTGRES_USER: myuser
       POSTGRES_PASSWORD: ROOT
     ports:
-      - "5432:5432"   
+      - "5432:5432"
+
+  backend:   # ✅ SAME LEVEL as postgres
+    build: .
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"
+      
