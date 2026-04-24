@@ -3,15 +3,18 @@ services:
     image: postgres:latest
     environment:
       POSTGRES_DB: crop_recommendation_system
-      POSTGRES_USER: myuser
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: ROOT
     ports:
       - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
 
-  backend:   # ✅ SAME LEVEL as postgres
+  backend:
     build: .
     depends_on:
-      - postgres
-    ports:
-      - "8080:8080"
-      
+      postgres:
+        condition: service_healthy
