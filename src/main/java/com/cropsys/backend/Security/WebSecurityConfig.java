@@ -19,16 +19,17 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import com.cropsys.backend.Repository.RoleRepository;
-import com.cropsys.backend.Repository.UserRepository;
+
 import com.cropsys.backend.Security.JWT.AuthEnteryPointJwt;
 import com.cropsys.backend.Security.JWT.AuthTokenFilter;
-import com.cropsys.backend.Security.JWT.JwtUtils;
+
 import com.cropsys.backend.Security.Requset.SignupRequest;
 import com.cropsys.backend.model.AppRole;
 import com.cropsys.backend.model.Role;
 import com.cropsys.backend.model.State;
 import com.cropsys.backend.model.User;
+import com.cropsys.backend.repository.RoleRepository;
+import com.cropsys.backend.repository.UserRepository;
 
 import lombok.extern.slf4j.Slf4j;
 

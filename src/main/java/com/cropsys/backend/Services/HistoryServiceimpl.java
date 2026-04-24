@@ -12,11 +12,11 @@ import com.cropsys.backend.Dtos.BestCropResponse;
 import com.cropsys.backend.Dtos.CropHistoryDto;
 import com.cropsys.backend.Dtos.CropRecommendationDto;
 import com.cropsys.backend.Dtos.CropResponce;
-import com.cropsys.backend.Repository.CropHistoryRepository;
-import com.cropsys.backend.Repository.UserRepository;
 import com.cropsys.backend.model.CropHistory;
 import com.cropsys.backend.model.CropSuggestion;
 import com.cropsys.backend.model.User;
+import com.cropsys.backend.repository.CropHistoryRepository;
+import com.cropsys.backend.repository.UserRepository;
 
 @Service
 public class HistoryServiceimpl implements HistoryService {

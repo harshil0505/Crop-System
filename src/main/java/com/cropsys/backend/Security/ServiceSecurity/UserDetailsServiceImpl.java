@@ -6,8 +6,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.cropsys.backend.Repository.UserRepository;
 import com.cropsys.backend.model.User;
+import com.cropsys.backend.repository.UserRepository;
 
 import jakarta.transaction.Transactional;
 

@@ -10,10 +10,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.cropsys.backend.Repository.OtpTokenRepository;
-import com.cropsys.backend.Repository.UserRepository;
 import com.cropsys.backend.model.OtpToken;
 import com.cropsys.backend.model.User;
+import com.cropsys.backend.repository.OtpTokenRepository;
+import com.cropsys.backend.repository.UserRepository;
 
 import jakarta.transaction.Transactional;
 

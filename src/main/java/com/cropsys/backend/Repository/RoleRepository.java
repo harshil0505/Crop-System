@@ -1,4 +1,4 @@
-package com.cropsys.backend.Repository;
+package com.cropsys.backend.repository;
 
 import java.util.Optional;
 

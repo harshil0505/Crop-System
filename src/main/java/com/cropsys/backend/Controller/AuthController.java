@@ -3,8 +3,6 @@ package com.cropsys.backend.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cropsys.backend.Repository.RoleRepository;
-import com.cropsys.backend.Repository.UserRepository;
 import com.cropsys.backend.Security.JWT.JwtUtils;
 import com.cropsys.backend.Security.Requset.LoginRequest;
 import com.cropsys.backend.Security.Requset.SignupRequest;
@@ -13,7 +11,8 @@ import com.cropsys.backend.Security.ServiceSecurity.UserDetailsImpl;
 import com.cropsys.backend.model.AppRole;
 import com.cropsys.backend.model.Role;
 import com.cropsys.backend.model.User;
-
+import com.cropsys.backend.repository.RoleRepository;
+import com.cropsys.backend.repository.UserRepository;
 
 import jakarta.validation.Valid;
 
